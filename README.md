@@ -1,0 +1,2 @@
+# Gezginler
+Web Ödev
