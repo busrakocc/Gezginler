@@ -1,0 +1,159 @@
+﻿@model gezginler.Models.Uye
+
+@{
+    ViewBag.Title = "Uyeol";
+}
+
+@*<center>
+    <div>
+        @using (Html.BeginForm("Uyeol", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "formKapsayici" }))
+        {
+            <img src="~/Content/img/join-team.png" alt="" style="float:left; height:300px; width:500px;" >
+            <div id="divSol">
+                @Html.LabelFor(i => Model.Ad)<br /><br />
+                @Html.LabelFor(i => Model.Soyad)<br /><br />
+                @Html.LabelFor(i => Model.EPosta)<br /><br />
+                @Html.LabelFor(i => Model.Parola)<br /><br />*@
+
+
+<!--Tüm elemanlarda for takısını kullanırken doğum tarihi ve resim yüklemede kullanmadık.
+    Çünkü bu iki elaman daha önce hazırladığımız Uye modeline ait değiller.
+    Bu yüzden elle ekledik.-->
+@*@Html.Label("Doğum Tarihiniz")<br /><br />
+        @Html.Label("Profil Resminiz")<br /><br />
+    </div>
+    <div id="divSag">
+        : @Html.TextBoxFor(i => Model.Ad)<br /><br />
+        : @Html.TextBoxFor(i => Model.Soyad)<br /><br />
+        : @Html.TextBoxFor(i => Model.EPosta)<br /><br />
+        : @Html.TextBoxFor(i => Model.Parola)<br /><br />*@
+
+
+
+<!--Aşağıdaki input type="file" dosya yüklemeye yarayan, html elementidir.-->
+@*<input type="file" id="inputFile" name="file" /> <br /><br />
+
+    </div>
+    <input type="submit" value="Üye Ol" id="btnUyeOl" />*@
+
+<!--Html.ValidationSummary ile formda oluşan geçerlilik hatalarını liste halinde gösterebiliyoruz.-->
+@*@Html.ValidationSummary()*@
+@*}*@
+@*</div>
+    </center>*@
+
+
+@*<center>
+        <div>
+            <img src="~/Content/img/join-team.png" alt="">
+
+            <h2>@ViewBag.Title.</h2>
+
+            @using (Html.BeginForm())
+            {
+                <p>Adınınz : @Html.TextBoxFor(m => m.Ad)</p>
+                <p>Soyadınız : @Html.TextBoxFor(m => m.Soyad)</p>
+                <p>Eposta : @Html.TextBoxFor(m => m.EPosta)</p>
+                <p>Parola : @Html.PasswordFor(m => m.Parola)</p>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" class="btn btn-default" value="Uye Ol" />
+                    </div>
+                </div>
+            }
+
+        </div>
+    </center>*@
+<div class="container">
+    <h2 style="font-family:'Times New Roman';">Yeni Hesap Oluştur</h2>
+    <center>
+
+        @using (Html.BeginForm("UyeOl", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+
+            @Html.AntiForgeryToken()
+
+            <hr />
+
+            <img src="~/Content/img/join-team.png" style="height:400px; width:600px; float:left" alt="">
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Ad)
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Ad, new { @class = "form-control" })
+                </div>
+            </div><br />
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Soyad)
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Soyad, new { @class = "form-control" })
+                </div>
+            </div><br />
+
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.EPosta)
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.EPosta)
+                </div>
+            </div><br />
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Parola)
+                <div class="col-md-10">
+                    @Html.PasswordFor(m => m.Parola)
+                </div>
+            </div><br />
+            @*<div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                    </div>
+                </div>*@
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" class="btn btn-default" value="Uye Ol" />
+                </div>
+            </div>
+
+        }
+    </center>
+</div>
+
+
+
+@section Scripts {
+    <style type="text/css">
+            #formKapsayici {
+                box-shadow: 0 0 5px gray;
+                padding: 25px;
+                height: 500px;
+            }
+
+            #divSol, #divSag {
+                float: left;
+                margin-left: 25px;
+            }
+
+                #divSol *, #divSag * {
+                    margin-top: 15px;
+                }
+
+            input[type="text"] {
+                width: 250px;
+            }
+
+            #btnUyeOl {
+                /*clear komutu ile önceki divlerin sola yaslanarak sıralanmasında, butonun bu yaslanmaya
+        uymayıp alt satıra inmesini sağlıyoruz*/
+                clear: both;
+                display: block;
+                margin-left: 132px;
+            }
+    </style>
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<gezginler.Models.Rehber>
+
+@{
+    Layout = null;
+}
+
+
+@foreach (var item in Model)
+{
+    
+        <h3><a href="#">@item.Baslik</a></h3>
+        <p>@item.Icerik</p>
+     
+ }

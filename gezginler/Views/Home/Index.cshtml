@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="/Content/img/Zhangjiajie.jpg" alt="" style="width:1500px; height:500px;">
+            <div class="carousel-caption">
+                <h3>Zhangjiajie</h3><br />
+                <p>Tianmen (Cennetin kapıları) shan Ulusal Parkı, Hunan’ın Zhangjiajie şehrinde bulunan 1000 metrenin üzerinde 40 civarında tepeden oluşan yüksek dağlarla ve birçok büyük doğa harikası mağaralarla çevrili bir yer.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/Content/img/london.png" alt="" style="width:1500px; height:500px;">
+            <div class="carousel-caption">
+                <h3>LONDON</h3><br />
+                <p>Dünyanın en büyük dönme dolabı olmasa da hiç şüphesiz dünyanın en çok tanınan ve önünde en çok  resim çektirilen dönme dolabı london eye 15 yıldır ağır ağır dönmeye devam ediyor.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/Content/img/wtraveller.jpg" alt="" style="width:1500px; height:500px;">
+            <div class="carousel-caption">
+                <h3>Bir gezginin objektifinden</h3><br />
+                <p>Dünyadaki her yeri gezerken objektifimden kareler sunuyorum size içi boş olmayan, gezdiğim yerlerdeki attığım her adımda bir mana barındıran.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/Content/img/mtraveller.jpg" alt="" style="width:1500px; height:500px;">
+            <div class="carousel-caption">
+                <h3>Bir gezginin günlüğü</h3><br />
+                <p>Sırtımda çantam göçebe bir hayat yaşıyorum, kalacak sabit bir yerim yoktur benim, aslında dünyanın her yerinde yaşayabilirim istediğim zamanda mekan değiştiririm.</p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><img src="/Content/img/arrow.png" alt=""></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><img src="/Content/img/arrow2.png" alt=""></a>
+</div>
+<div class="container">
+    <!--Start Carousel-->
+   
+    <!--End Carousel-->
+    <hr>
+    <div class="row">
+        <div class="span4">
+            <h3>Holi Fest- Hindistan<small> By <a href="#">a User</a></small></h3>
+            <a rel="lightbox" href="~/Content/img/holi.jpg"><img style="width:400px; height:225px;"src="~/Content/img/holi.jpg" alt=""></a>
+        </div>
+        <div class="span4">
+            <h3>Abisko<small> By <a href="#">a User</a></small></h3>
+            <a rel="lightbox" href="~/Content/img/Abisko.png"><img src="~/Content/img/Abisko.png" alt=""></a>
+        </div>
+        <div class="span4">
+            <h3>Gezgin Olarak...</h3>
+            <blockquote>
+                O sırtçantasını alıp, çok uzaklara uzunca zaman gitmeye bir türlü gönlün el vermiyor değil mi ? Bu kadar hayalin varken, dünyanın bu kadar güzel olduğunu biliyorken, bambaşka diyarlarda havanın, suyun, toprağın,  sokakların, kuşların, ağaçların seni hayallere daldıracağını biliyorken, neden duruyorsun dostum ? Kalk hadi. Düş peşime. Keşfetmemiz gereken 196 ülke, dolaşmamız gereken 7 kıta, öğrenmemiz gereken sonu gelmeyen bir yolculuk var önümüzde. Korkma ! Ben yaptıysam, pek ala sende yaparsın. Hazır mısın ? <br>
+                <br>
+                <em>- GezginlerinObjektifi</em>
+            </blockquote>
+            <p><a class="btn" href="#">Daha Fazla &raquo;</a></p>
+        </div>
+    </div>
+    <!--Start second row of columns-->
+    <hr>
+
+    <div class="row">
+        <div class="span6 thumb-list">
+            @{ Html.RenderAction("_Resim", "Home");}
+        </div>
+
+        <div style="float:right">
+            <div class="span6 thumb-list">
+                @{ Html.RenderAction("_Rehber", "Home");}
+
+            </div>
+        </div>
+    </div>
+
+    @*<div class="row">
+        <div class="span6 thumb-list">
+            <a rel="lightbox" href="~/Content/img/tokyo.png"><img style="width:300px; height:200px;" src="~/Content/img/tokyo.png" alt=""></a>
+            <h3><a href="#">Tokyo</a></h3>
+            <p>Bugüne dek onlarca gezi yazısı kaleme aldım; bazısı sayfalar dolusu, bazısı birkaç paragraftan ibaret... Fakat iş Japonya ve Tokyo hakkında bir şeyler söylemeye gelince, söze nereden başlayacağımı, nasıl bir giriş yapacağımı dahi bilemedim doğrusu. Bu ilk paragrafı yazmak bile onlarca dakikamı aldı, çünkü ...</p>
+            <a href="#" class="btn">Daha Fazla</a>
+         </div>
+        <div class="span6 thumb-list">
+            <a rel="lightbox" href="~/Content/img/seaofstarsmaldivs.jpg"><img style="width:300px; height:200px;" src="~/Content/img/seaofstarsmaldivs.jpg" alt=""></a>
+            <h3><a href="#">Sea Of Stars- Maldivler</a></h3>
+            <p>Vaadhoo adası, Maldivler'de yer alan en özel adalardan birisi.Adada geceleri gelgit olayının yaşandığı sırada ortaya çıkan mavi renkli sürpriz ışıltı görenleri hayrete düşürüyor.</p>
+            <a href="#" class="btn">Daha Fazla</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6 thumb-list">
+            <a rel="lightbox" href="~/Content/img/toronto.png"><img style="width:300px; height:200px;" src="~/Content/img/toronto.png" alt=""></a>
+            <h3><a href="#">Toronto</a></h3>
+            <p>Kanada gezimizin ilk büyük şehri Toronto’ya, Niagara-On-The-Lake bölgesinde geçirdiğimiz çok güzel birkaç saat sonrasında bir pazar öğleden sonra geldik. Kalacağımız otelin de olduğu şehir merkezine yaklaşık 7-8 km kala tıkanan trafiği aşmamız en az bir saatimizi aldı.</p>
+            <a href="#" class="btn">Daha Fazla</a>
+        </div>
+        <div class="span6 thumb-list">
+            <a rel="lightbox" href="~/Content/img/trolltunga.jpg"><img style="width:300px; height:200px;" src="~/Content/img/trolltunga.jpg" alt=""></a>
+            <h3><a href="#">Trolltunga</a></h3>
+            <p>Norveç seyahatinin en önemli sebeplerinden birisidir Trolltunga… Bu kayalık üstünde o meşhur pozu vermek için kalbiniz heyecanla atar, adımlarınız hızlanır. İşte meşhur kayalığımıza gitmek için izleyeceğiniz rota şöyle olmakta...</p>
+            <a href="#" class="btn">Daha Fazla</a>
+        </div>
+    </div>*@
+    <hr>
+</div>

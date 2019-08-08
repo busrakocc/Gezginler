@@ -1,0 +1,41 @@
+﻿@model IEnumerable <gezginler.Models.Resim>
+
+@{
+    Layout = null;
+}
+
+
+@foreach (var item in Model)
+{
+    
+        <a rel="lightbox" href="~/Content/img/tokyo.png"><img style="width:500px; height:200px;" src="@item.Resimyol" alt=""></a>
+   
+  }
+        @*<div class="row">
+                <div class="span6 thumb-list">
+                    <a rel="lightbox" href="~/Content/img/tokyo.png"><img style="width:300px; height:200px;" src="~/Content/img/tokyo.png" alt=""></a>
+                    <h3><a href="#">Tokyo</a></h3>
+                    <p>Bugüne dek onlarca gezi yazısı kaleme aldım; bazısı sayfalar dolusu, bazısı birkaç paragraftan ibaret... Fakat iş Japonya ve Tokyo hakkında bir şeyler söylemeye gelince, söze nereden başlayacağımı, nasıl bir giriş yapacağımı dahi bilemedim doğrusu. Bu ilk paragrafı yazmak bile onlarca dakikamı aldı, çünkü ...</p>
+                    <a href="#" class="btn">Daha Fazla</a>
+                </div>
+                <div class="span6 thumb-list">
+                    <a rel="lightbox" href="~/Content/img/seaofstarsmaldivs.jpg"><img style="width:300px; height:200px;" src="~/Content/img/seaofstarsmaldivs.jpg" alt=""></a>
+                    <h3><a href="#">Sea Of Stars- Maldivler</a></h3>
+                    <p>Vaadhoo adası, Maldivler'de yer alan en özel adalardan birisi.Adada geceleri gelgit olayının yaşandığı sırada ortaya çıkan mavi renkli sürpriz ışıltı görenleri hayrete düşürüyor.</p>
+                    <a href="#" class="btn">Daha Fazla</a>
+                </div>
+            </div>*@
+        @*<div class="row">
+                <div class="span6 thumb-list">
+                    <a rel="lightbox" href="~/Content/img/toronto.png"><img style="width:300px; height:200px;" src="~/Content/img/toronto.png" alt=""></a>
+                    <h3><a href="#">Toronto</a></h3>
+                    <p>Kanada gezimizin ilk büyük şehri Toronto’ya, Niagara-On-The-Lake bölgesinde geçirdiğimiz çok güzel birkaç saat sonrasında bir pazar öğleden sonra geldik. Kalacağımız otelin de olduğu şehir merkezine yaklaşık 7-8 km kala tıkanan trafiği aşmamız en az bir saatimizi aldı.</p>
+                    <a href="#" class="btn">Daha Fazla</a>
+                </div>
+                <div class="span6 thumb-list">
+                    <a rel="lightbox" href="~/Content/img/trolltunga.jpg"><img style="width:300px; height:200px;" src="~/Content/img/trolltunga.jpg" alt=""></a>
+                    <h3><a href="#">Trolltunga</a></h3>
+                    <p>Norveç seyahatinin en önemli sebeplerinden birisidir Trolltunga… Bu kayalık üstünde o meşhur pozu vermek için kalbiniz heyecanla atar, adımlarınız hızlanır. İşte meşhur kayalığımıza gitmek için izleyeceğiniz rota şöyle olmakta...</p>
+                    <a href="#" class="btn">Daha Fazla</a>
+                </div>
+            </div>*@
